@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/note"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingTop="8dp"
+  android:paddingBottom="8dp"
+  android:paddingLeft="12dp">
+
+    <CheckBox
+      android:id="@+id/checkbox"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+    <ImageButton
+      android:id="@id/btn_delete"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:padding="8dp"
+      android:background="@null"
+      android:scaleType="centerInside"
+      android:src="@drawable/ic_close_gray_24dp" />
+
+    <TextView
+      android:id="@+id/text_date"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:layout_alignStart="@id/text_content"
+      android:layout_below="@id/text_content"
+      android:textColor="#808080"
+      android:textSize="14sp" />
+
+
+    <TextView
+      android:id="@+id/text_ddl"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:layout_marginLeft="186dp"
+      android:layout_alignRight="@id/text_content"
+      android:layout_below="@id/text_content"
+      android:textColor="#03A9F4"
+      android:textSize="14sp" />
+    <TextView
+      android:id="@+id/text_content"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_toEndOf="@id/checkbox"
+      android:layout_toStartOf="@+id/btn_delete"
+      android:textColor="#1e1e1e"
+      android:textSize="18sp"
+      tools:text="This is a very very long content to test multiple lines display" />
+
+</RelativeLayout>
