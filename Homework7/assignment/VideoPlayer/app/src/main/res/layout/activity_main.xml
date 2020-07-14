@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".MainActivity">
+
+
+    <com.bytedance.videoplayer.player.IjkVideoPlayer
+      android:id="@+id/ijkPlayer"
+      android:layout_width="match_parent"
+      android:layout_height="240dp">
+        <RelativeLayout
+          android:id="@+id/seekbar"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_gravity="bottom"
+          android:orientation="horizontal"
+          tools:layout_alignParentBottom="false">
+
+            <SeekBar
+              android:id="@+id/seekBarVideo"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center"
+              android:layout_toLeftOf="@+id/tvTotalTime"
+              android:layout_toRightOf="@+id/tvCurrentTime" />
+
+            <TextView
+              android:id="@+id/tvCurrentTime"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:text="播放时间："
+              android:textColor="@android:color/white" />
+
+            <TextView
+              android:id="@+id/tvTotalTime"
+              android:layout_width="wrap_content"
+              android:layout_height="match_parent"
+              android:layout_alignParentRight="true"
+              android:gravity="center"
+              android:text="总时间："
+              android:textColor="@android:color/white" />
+
+        </RelativeLayout>
+    </com.bytedance.videoplayer.player.IjkVideoPlayer>
+
+
+    <Button
+      android:id="@+id/buttonPlay"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="PLAY" />
+
+    <Button
+      android:id="@+id/buttonPause"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:text="PAUSE" />
+
+    <TextView
+      android:id="@+id/textSpeed"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"
+      android:gravity="center"
+      android:text="SPEED: 1.0x"
+      android:textColor="#000000"
+      android:textSize="14sp" />
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal">
+        <Button
+          android:id="@+id/x0.5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="0.5x" />
+        <Button
+          android:id="@+id/x1.0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="1.0x" />
+        <Button
+          android:id="@+id/x1.25"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="1.25x" />
+        <Button
+          android:id="@+id/x1.5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="1.5x" />
+        <Button
+          android:id="@+id/x2.0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="2.0x" />
+    </LinearLayout>
+
+</LinearLayout>
